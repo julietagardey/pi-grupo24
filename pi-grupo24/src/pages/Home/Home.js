@@ -7,7 +7,7 @@ const Home = () => {
         <h1>Home</h1>
         <main>
             {/* Form de búsqueda */}
-            {/* <FormBusqueda /> */}
+            <FormBusqueda className="BuscadorHome" history={this.props.history}/>
 
             {/* 2 sections con 5 elementos */}
             <PelisPopuGrid/>
