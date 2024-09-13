@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <section className="headerIzquierda">
-                <img className="logo" src="./img/logo-img.png" alt="logo" />
+                <img className="logo" src="./img/logo.png" alt="logo" />
 
                 <Link to="/" className="home">
                     <h2 className="home">Inicio</h2>
@@ -29,4 +29,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
