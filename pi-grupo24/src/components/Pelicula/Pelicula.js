@@ -6,15 +6,15 @@ class Pelicula extends Component {
         this.state = {}
     }
     render(){
-        const {title, overview, vote_average, release_date, poster_path} = this.props.pelicula
+        const {title, id, poster_path, overview, vote_average, release_date} = this.props.pelicula
         return(
             <article>
-                <h2>Título: {title}</h2>
+                <h3>Título: {title}</h3>
+                <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="portada"/> 
                 <p>Sinopsis: {overview}</p>
                 <p>Rating: {vote_average}</p>
                 <p>Fecha de estreno: {release_date}</p>
-                <img src="" alt="Imagen"/>
-
+                <button>Agregar a favoritos</button> 
             </article>
         )
     }

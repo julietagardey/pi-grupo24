@@ -22,9 +22,11 @@ class PeliculasGrid extends Component {
             <section>
                 <h2>{this.props.titulo}</h2>
                 {
-                    this.state.arrayPeliculas.map((pelicula, idx) => (
-                        <Pelicula key={idx} pelicula={pelicula} />
-                    ))
+                    this.state.arrayPeliculas.map((pelicula, idx) => {
+                        if(idx <= 4){
+                            return <Pelicula key={idx} pelicula={pelicula} />
+                        }
+                    })
                 }
             </section> :
             <h3>Cargando...</h3>
