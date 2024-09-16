@@ -28,8 +28,7 @@ class ResultadoBusqueda extends Component {
 
   render() {
     return (
-     
-
+     <p></p>
     )
   }
 

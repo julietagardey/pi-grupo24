@@ -8,13 +8,13 @@ const Header = () => {
             <section className="headerIzquierda">
                 <img className="logo" src="./img/logo.png" alt="logo" />
 
-                <Link to="/" className="home">
+                {/* <Link to="/" className="home">
                     <h2 className="home">Inicio</h2>
-                </Link>
+                </Link> */}
             </section>
             <nav className="headerDerecha">
                 <article className="linksHeader">
-                    <Link to="/Favorites" className="linkfavoritos">
+                    {/* <Link to="/Favorites" className="linkfavoritos">
                         Favoritos
                     </Link>
                     <Link to="/NowPlayingVista" className="linkfavoritos">
@@ -22,7 +22,7 @@ const Header = () => {
                     </Link>
                     <Link to="/TopRatedVista" className="linkfavoritos">
                         Más Populares
-                    </Link>
+                    </Link> */}
                 </article>
             </nav>
         </header>

@@ -1,12 +1,12 @@
 import { Component } from "react";
 
-class PeliPopu extends Component {
+class Pelicula extends Component {
     constructor(props){
         super(props)
         this.state = {}
     }
     render(){
-        const {title, overview, vote_average, release_date, poster_path} = this.props.peliculaPopu
+        const {title, overview, vote_average, release_date, poster_path} = this.props.pelicula
         return(
             <article>
                 <h2>Título: {title}</h2>
@@ -20,4 +20,4 @@ class PeliPopu extends Component {
     }
 }
 
-export default PeliPopu;
+export default Pelicula;
