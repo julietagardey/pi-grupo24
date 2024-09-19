@@ -4,49 +4,43 @@ class FormBusqueda extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valorInput: "",
-      peliculas: [],
+      query: "",
     };
   }
 
-  detenerDefault(evento) {
-    evento.preventDefault();
-    this.props.history.push('/busqueda/' + this.state.valorInput)
+  handleCancelSubmit(e) {
+    e.preventDefault()
   }
 
-  guardarInput(evento) {
+  handleFormChange(e){
     this.setState({
-      valorInput: evento.target.value,
+      query: e.target.value,
     });
   }
 
-  updateStateFavs(array) {
-    this.setState({
-      favoritos: array
-    })
-  }
-
   handleFormSubmit(){
-    this.props.history.push("./search", {valorInput: this.state.valorInput})
+    this.props.history.push("/search", {query: this.state.query})
   }
 
   render() {
     return (
       <div className="search-container">
-        <form onSubmit={(evento) => this.detenerDefault(evento)}>
+        <form onSubmit={(e) => this.handleCancelSubmit(e)}>
           <input
             className="search-input"
             type="text"
-            onChange={(evento) => this.guardarInput(evento)}
-            value={this.state.valorInput}
+            name="query"
+            onChange={(e) => this.handleFormChange(e)}
+            value={this.state.query}
             placeholder="Buscar..."
           />
+          <button onClick={() => this.handleFormSubmit()}>Buscar</button>
           <i class="fas fa-search search-icon" onClick={() => this.handleFormSubmit()}></i>
         </form>
       </div>
-    );
+    )
   }
 }
 
 
-export default FormBusqueda
+export default FormBusqueda;
