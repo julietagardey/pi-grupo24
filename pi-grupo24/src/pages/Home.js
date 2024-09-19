@@ -22,8 +22,8 @@ class Home extends Component {
 
             {/* 2 sections con 5 elementos */}
             {/* cada section con su filtro buscatos (se hace con el .filter()) */}
-            <PeliculasGrid url={`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`} titulo="Películas Populares"/>
-            <PeliculasGrid url={`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`} titulo="Películas Más Valoradas"/>
+            <PeliculasGrid url={`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`} titulo="Películas Populares" enlace="/populares"/>
+            <PeliculasGrid url={`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`} titulo="Películas Más Valoradas" enlace="/toprated"/>
             
         </main>
         </>

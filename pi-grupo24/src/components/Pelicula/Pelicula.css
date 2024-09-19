@@ -19,3 +19,10 @@
 .botonFavoritos {
     padding-left: 15px;
 }
+.mostrar {
+    display: block
+}
+
+.ocultar {
+    display: none
+}

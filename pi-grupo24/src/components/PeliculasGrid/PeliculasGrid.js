@@ -1,6 +1,7 @@
 import {Component} from "react";
 import Pelicula from "../Pelicula/Pelicula";
 import "../PeliculasGrid/PeliculasGrid.css";
+import { Link } from "react-router-dom";
 
 
 class PeliculasGrid extends Component {
@@ -30,6 +31,9 @@ class PeliculasGrid extends Component {
                         }
                     })
                 }
+                <div className="tituloSeccion">
+                    <Link className="verTodas" to={this.props.enlace}>Ver todas</Link>
+                </div>
             </section> :
             <h3>Cargando...</h3>
             }

@@ -34,3 +34,8 @@
     padding-left: 15px;
     margin-top: auto;
 }
+.verTodas {
+    color:black;
+    display: flex;
+    justify-content: center;
+}
