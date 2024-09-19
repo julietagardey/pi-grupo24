@@ -18,7 +18,7 @@ class Home extends Component {
         <h1>Home</h1>
         <main>
             {/* Form de búsqueda */}
-            <FormBusqueda className="BuscadorHome" history={this.props.history} />
+            <FormBusqueda history={this.props.history} />
 
             {/* 2 sections con 5 elementos */}
             {/* cada section con su filtro buscatos (se hace con el .filter()) */}

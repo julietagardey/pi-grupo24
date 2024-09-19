@@ -1,0 +1,12 @@
+.hija-buscador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    order: 3;
+    align-items: center;
+    margin-right: 42px;
+}
+.barra_busc {
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,21 @@
+.elemento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* esto hace que los elementos se pongan uno abajo del otro*/
+    max-width: 380px;
+    padding: 0;
+    margin: 20px 0px;
+    border: 3px solid white;
+    background-color: black;
+
+}
+.sub-elemento {
+    padding-left: 15px;
+}
+.img-producto {
+    width: 100%;
+}
+.botonFavoritos {
+    padding-left: 15px;
+}

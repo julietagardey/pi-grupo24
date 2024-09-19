@@ -1,23 +1,24 @@
 import Footer from './components/Footer/Footer';
-import FormBusqueda from './components/FormBusqueda/FormBusqueda';
 import Header from './components/Header/Header'
-import {Route,Switch} from "react-router-dom";
-import Home from "./pages/Home"
+import { Switch, Route} from "react-router-dom";
+import Home from "./pages/Home";
+// importar componentes: ver rutas
 
 
 function App() {
   return (
     <>
-    
-      <Header></Header>
+      <Header />
       <Switch>
         <Route exact path="/" component={Home}/>
-        {/* <Route path="/NowPlayingVista" component={Home}/> */}
+        {/* <Route path="/favoritos" component={Favoritos}/>
+        <Route path="/populares" component={PeliculasPopulares}/>
+        <Route path="/toprated" component={PeliculasTopRated}/>
+        <Route path="/detallePelicula" component={DetallePelicula} /> */}
+      
       </Switch>
-
-      <p>Volvio el muñeco!!</p>
-      {/* <FormBusqueda/> */}
-      <Footer></Footer>
+      {/* <p>Volvio el muñeco!!</p> */}
+      <Footer />
     </>
   );
 }

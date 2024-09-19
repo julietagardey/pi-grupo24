@@ -4,27 +4,21 @@ import "./Header.css"
 
 const Header = () => {
     return (
-        <header>
-            <section className="headerIzquierda">
+        <header className="header">
+            <section className=" hija-logo">
                 <img className="logo" src="./img/logo.png" alt="logo" />
-
-                {/* <Link to="/" className="home">
-                    <h2 className="home">Inicio</h2>
-                </Link> */}
             </section>
-            <nav className="headerDerecha">
-                <article className="linksHeader">
-                    {/* <Link to="/Favorites" className="linkfavoritos">
-                        Favoritos
-                    </Link>
-                    <Link to="/NowPlayingVista" className="linkfavoritos">
-                        En Cartel
-                    </Link>
-                    <Link to="/TopRatedVista" className="linkfavoritos">
-                        Más Populares
-                    </Link> */}
-                </article>
-            </nav>
+
+            <section className="hija-nav">
+                <nav className="nav">
+                    <ul className="barra-nav">
+                        <li className="item"><Link className="linkHeader" to="/">Home |</Link></li>
+                        <li className="item"><Link className="linkHeader" to="/favoritos"> Favoritos |</Link></li>
+                        <li className="item"><Link className="linkHeader" to="/populares">Películas Populares |</Link></li>
+                        <li className="item"><Link className="linkHeader" to="/toprated">Películas Más Valoradas</Link></li>
+                    </ul>
+                </nav>
+            </section>
         </header>
     )
 }

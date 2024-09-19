@@ -1,5 +1,6 @@
 import {Component} from "react";
 import Pelicula from "../Pelicula/Pelicula";
+import "../PeliculasGrid/PeliculasGrid.css";
 
 
 class PeliculasGrid extends Component {
@@ -16,11 +17,12 @@ class PeliculasGrid extends Component {
             .catch(e => console.log(e))
     }
     render(){
+        // ME FALTA HACER LINK A VER TODAS POR SECCION
         return(
             <>
             {this.state.arrayPeliculas.length > 0 ?
-            <section>
-                <h2>{this.props.titulo}</h2>
+            <section className="pelis">
+                <h2 className="tituloSeccion" >{this.props.titulo}</h2>
                 {
                     this.state.arrayPeliculas.map((pelicula, idx) => {
                         if(idx <= 4){

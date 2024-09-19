@@ -1,0 +1,36 @@
+.pelis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2%;
+    /* 0 para arriba y abajo*/
+    margin: 2% 5%;
+    border: 1px solid white;
+    background-color: #c6d7de7b;
+    box-sizing: border-box;
+}
+.tituloSeccion {
+    width: 100%;
+}
+.pelis .elemento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    max-width: 380px;
+    padding: 0;
+    margin: 20px 0px;
+    border: 3px solid white;
+    background-color: black;
+    box-sizing: border-box;
+
+}
+.sub-elemento {
+    padding-left: 15px;
+    color: white;
+}
+
+.botonFavoritos {
+    padding-left: 15px;
+    margin-top: auto;
+}

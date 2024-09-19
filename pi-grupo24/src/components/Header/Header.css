@@ -1,9 +1,45 @@
-header {
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #dedede;
     padding: 40px 0;
     width: 100%;
 }
+.barra-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0;
+    /* gap: 20px; */
 
-.logo{
-    width: 15%;
+}
+.hija-nav {
+    display: flex;
+    order: 2;
+    align-items: center;
+}
+.item {
+    font-size: 25px;
+    list-style-type: none;
+    padding: 5px
+}
+.linkHeader {
+    text-decoration: none;
+    color: black;
+}
+.hija-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 1;
+}
+.logo {
+    width: 200px;
+    align-self: flex-start;
+    margin-left: 40px;
+    margin-top: 10px;
 }

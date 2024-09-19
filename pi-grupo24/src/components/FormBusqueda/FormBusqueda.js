@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import "../FormBusqueda/FormBusqueda"
 
 class FormBusqueda extends Component {
   constructor(props) {
@@ -24,8 +25,9 @@ class FormBusqueda extends Component {
 
   render() {
     return (
-      <div className="search-container">
+      <section className="hija-buscador">
         <form onSubmit={(e) => this.handleCancelSubmit(e)}>
+          <div className="barra-busc">
           <input
             className="search-input"
             type="text"
@@ -35,9 +37,10 @@ class FormBusqueda extends Component {
             placeholder="Buscar..."
           />
           <button onClick={() => this.handleFormSubmit()}>Buscar</button>
-          <i class="fas fa-search search-icon" onClick={() => this.handleFormSubmit()}></i>
+          </div>
+          {/* <i class="fas fa-search search-icon" onClick={() => this.handleFormSubmit()}></i> */}
         </form>
-      </div>
+      </section>
     )
   }
 }
