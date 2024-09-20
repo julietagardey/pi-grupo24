@@ -1,33 +1,36 @@
 .pelis {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 2%;
+    justify-content: center;
+    padding: 0px;
+    width: 90%;
     /* 0 para arriba y abajo*/
-    margin: 2% 5%;
-    border: 1px solid white;
-    background-color: #c6d7de7b;
+    margin: 1% 5%;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #dedede;
     box-sizing: border-box;
 }
 .tituloSeccion {
     width: 100%;
+    margin-left: 20px;
 }
 .pelis .elemento {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     
-    max-width: 380px;
-    padding: 0;
-    margin: 20px 0px;
-    border: 3px solid white;
-    background-color: black;
+    max-width: 30%;
+    padding: 0px;
+    margin: 15px 5px;
+    border: 3px solid black;
+    background-color: #dedede;
     box-sizing: border-box;
-
 }
+
 .sub-elemento {
-    padding-left: 15px;
-    color: white;
+    padding-left: 5px;
+    color: black;
 }
 
 .botonFavoritos {
@@ -35,7 +38,7 @@
     margin-top: auto;
 }
 .verTodas {
-    color:black;
+    color:#c6d7de7b;
     display: flex;
     justify-content: center;
 }

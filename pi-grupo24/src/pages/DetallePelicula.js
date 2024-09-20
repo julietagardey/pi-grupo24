@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import DetalleCard from ".../components/DetalleCard/DetalleCard";
+import { Component } from "react";
+import DetalleCard from ".././components/DetalleCard/DetalleCard";
 
 
 class DetallePelicula extends Component {
@@ -20,7 +20,5 @@ class DetallePelicula extends Component {
     );
   }
 }
-
-
 
 export default DetallePelicula;

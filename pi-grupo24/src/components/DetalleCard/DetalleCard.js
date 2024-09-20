@@ -9,7 +9,7 @@ class DetalleCard extends Component {
     }
 
     componentDidMount() {
-        fetch()
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=f2d31985b9fc9e720758bcc82e3c955b`)
             .then(resp => resp.json())
             .then(data => {
                 console.log(this.props.match.params.id)
@@ -23,8 +23,7 @@ class DetalleCard extends Component {
 
     render() {
         let DetalleCardContenido = this.state
-        console.log(DetalleCardContenido.DetalleCardContenido.id);
-        return (
+          return (
 
              this.state.DetalleCardContenido.length !== 0 ?
 
@@ -44,7 +43,4 @@ class DetalleCard extends Component {
         )
     }
 }
-
-
-
 export default DetalleCard;

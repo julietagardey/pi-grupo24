@@ -14,8 +14,8 @@ const Header = () => {
                     <ul className="barra-nav">
                         <li className="item"><Link className="linkHeader" to="/">Home |</Link></li>
                         <li className="item"><Link className="linkHeader" to="/favoritos"> Favoritos |</Link></li>
-                        <li className="item"><Link className="linkHeader" to="/populares">Películas Populares |</Link></li>
-                        <li className="item"><Link className="linkHeader" to="/toprated">Películas Más Valoradas</Link></li>
+                        <li className="item"><Link className="linkHeader" to="/populares"> Populares |</Link></li>
+                        <li className="item"><Link className="linkHeader" to="/toprated"> Más Valoradas</Link></li>
                     </ul>
                 </nav>
             </section>
