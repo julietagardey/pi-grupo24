@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import { Switch, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import PeliculasTopRated from './components/PeliculasTopRated/PeliculasTopRated';
+import NotFound from './components/NotFound/NotFound';
 // importar componentes: ver rutas
 
 
@@ -16,9 +17,8 @@ function App() {
         {/* <Route path="/favoritos" component={Favoritos}/>
         <Route path="/populares" component={PeliculasPopulares}/>
         <Route path="/detallePelicula" component={DetallePelicula} /> */}
-      
+        <Route component={NotFound}/>
       </Switch>
-      {/* <p>Volvio el muñeco!!</p> */}
       <Footer />
     </>
   );
