@@ -67,8 +67,8 @@ class PeliculasTopRated extends Component {
                             this.state.peliculas.map((pelicula, idx) => 
                                 <Pelicula 
                                     key= {idx}
-                                    // title= {pelicula}
-                                    data= {pelicula}
+                                    // title= {pelicula.title}
+                                    pelicula= {pelicula}
                                     favoritos= {this.state.favoritos.includes(pelicula.id)}
                                     updateStateFavs={(array) => this.updateStateFavs(array)}
                                     className="card"
