@@ -25,6 +25,12 @@ a.sub-elemento{
     margin: 5px;
 }
 
+a.titulo{
+    text-decoration: none;
+    border: 0px;
+    color: black;
+}
+
 .img-producto {
     width: 80%;
     margin: 10px;

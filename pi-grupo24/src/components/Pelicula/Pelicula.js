@@ -63,7 +63,7 @@ class Pelicula extends Component {
         const {title, id, poster_path, overview, vote_average, release_date} = this.props.pelicula
         return(
             <article className="elemento">
-                <h3 className="sub-elemento" >Título: {title}</h3>
+                <h3 className="sub-elemento" ><Link className="titulo" to="/detallePelicula">Título: {title}</Link></h3>
                 <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="portada" className="img-producto"/> 
                 <p className={ this.state.verMas ? "sub-elemento mostrar" : "sub-elemento ocultar"}>Sinopsis: {overview}</p>
                 <button className="botonFavoritos" onClick={ () => this.handleVerMas()}> {this.state.verMas ? "Ocultar descripción" : "Ver descripción"} </button>
