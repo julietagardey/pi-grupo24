@@ -9,6 +9,7 @@ const Header = () => {
                 <img className="logo" src="./img/logo.png" alt="logo" />
             </section>
 
+            {/* BARRA DE NAVEGACIÓN */}
             <section className="hija-nav">
                 <nav className="nav">
                     <ul className="barra-nav">

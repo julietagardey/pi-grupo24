@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
+// import MovieCard from '../../Components/NowPlayingCard/NowPlayingCard';
 
 
 class ResultadoBusqueda extends Component {

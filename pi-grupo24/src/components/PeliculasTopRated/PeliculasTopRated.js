@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Pelicula from "../Pelicula/Pelicula";
+import "../PeliculasTopRated/PeliculasTopRated.css";
 
 class PeliculasTopRated extends Component {
     constructor(props) {
@@ -61,7 +62,7 @@ class PeliculasTopRated extends Component {
                 <div>
                     {/* aca va el filtrador */}
                 </div>
-                <div className="movieCard">
+                <div className="pelis">
                     {
                         this.state.peliculas.length > 0 ? 
                             this.state.peliculas.map((pelicula, idx) => 
@@ -77,8 +78,8 @@ class PeliculasTopRated extends Component {
                             
                     }
 
-                    <div className="botonCargarMas">
-                        <button onClick={() => this.cargarMasPeliculas()}>Cargar Más</button>
+                    <div className="tituloSeccion">
+                        <button className="botonCargarMas" onClick={() => this.cargarMasPeliculas()}>Cargar Más</button>
                     </div>
 
                 </div>
