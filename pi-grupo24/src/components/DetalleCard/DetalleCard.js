@@ -1,21 +1,24 @@
 import { Component } from "react";
+import "../DetalleCard/DetalleCard.css"
 
 class DetalleCard extends Component {
     constructor(props) {
         super(props)
         this.state = {
             esFavorito: false,
+            pelicula: {}
         }
     }
 
     componentDidMount() {
-        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.id}?api_key=f2d31985b9fc9e720758bcc82e3c955b`)
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.id}?api_key=f2d31985b9fc9e720758bcc82e3c955b`)
             .then(resp => resp.json())
             .then(data => {
+                console.log(this.props.id);
                 this.setState({
-                    pelicula: data.results
+                    pelicula: data
                 })
-                console.log(data.results)
+                console.log(data)
             })
             .catch(er => console.log(er))
     }

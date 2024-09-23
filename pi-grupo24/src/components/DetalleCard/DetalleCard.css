@@ -1,0 +1,60 @@
+.elemento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    /* esto hace que los elementos se pongan uno abajo del otro*/
+    max-width: 100px;
+    padding: 0px;
+    margin: 10px 0px;
+    border: 3px solid black;
+    background-color: #666;
+    border-radius: 20px;
+}
+
+.sub-elemento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    padding-left: 5px;
+    margin: 2px;
+}
+
+a.sub-elemento{
+    text-decoration: none;
+    padding-left: 5px;
+    border: 3px solid black;
+    margin: 5px;
+}
+
+a.titulo{
+    text-decoration: none;
+    border: 0px;
+    color: black;
+}
+
+.img-producto {
+    width: 80%;
+    margin: 10px;
+}
+
+.botonFavoritos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.mostrar {
+    display: block;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.ocultar {
+    display: none
+}

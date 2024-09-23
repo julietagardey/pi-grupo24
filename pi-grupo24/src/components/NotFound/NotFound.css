@@ -1,0 +1,9 @@
+.NotFound {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.notFoundImg {
+    display: flex;
+    align-items: center;
+}

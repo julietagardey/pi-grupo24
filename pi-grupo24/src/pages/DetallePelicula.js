@@ -1,32 +1,30 @@
-import { Component } from "react";
+// import { Component } from "react";
 import DetalleCard from "../components/DetalleCard/DetalleCard";
 
-// const DetallePelicula = ({ match }) => {
-//   const { id } = match.params;
-//   console.log(id)
+const DetallePelicula = (props) => {
 
-//   return (
-//     <DetalleCard id={id} />
-//   )
-// };
+  return (
+    <section className="pelis">
+      <DetalleCard id={props.match.params.id} />
+    </section>
+  )
+};
 
-class DetallePelicula extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      pelicula: {},
-      // filmInfo: null,
-      // id: this.props.match.params.id
-    }
-  }
+// class DetallePelicula extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+      
+//     }
+//   }
 
-  render() {
-    return (
-      <div>
-        <DetalleCard match={this.props.match} />      
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <section className="pelis">
+//         <DetalleCard id={this.props.match.params.id} />   
+//       </section>
+//     );
+//   }
+// }
 
 export default DetallePelicula;
