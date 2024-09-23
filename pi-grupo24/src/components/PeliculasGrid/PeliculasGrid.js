@@ -19,7 +19,6 @@ class PeliculasGrid extends Component {
             .catch(e => console.log(e))
     }
     render(){
-        // ME FALTA HACER LINK A VER TODAS POR SECCION
         return(
             <>
             {this.state.arrayPeliculas.length > 0 ?

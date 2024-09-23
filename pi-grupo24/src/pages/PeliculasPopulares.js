@@ -2,6 +2,7 @@ import { Component } from "react";
 import PeliculasFavs from "../components/PeliculasFavs/PeliculasFavs";
 
 
+
 class PeliculasPopulares extends Component {
     constructor(props){
         super(props)
@@ -55,6 +56,7 @@ class PeliculasPopulares extends Component {
     render(){
         return(
             <>
+            <h2>Películas Populares</h2>
             <input  
                 type="text"
                 value={this.state.filterValue}
@@ -63,8 +65,9 @@ class PeliculasPopulares extends Component {
             /> 
             <button onClick={() => this.handleResetFilter()} >Reset Filter</button>
             <PeliculasFavs arrayPeliculas = {this.state.filteredMovies}/>
-
-            <button onClick={() => this.handleLoadMore()} >Cargar Más</button>
+            <div className="cargarMas" >
+                <button className="botonCM" onClick={() => this.handleLoadMore()} >Cargar Más</button>
+            </div>
             </>
         )
     }
