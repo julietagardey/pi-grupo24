@@ -1,0 +1,13 @@
+div.TopRated div.movieCard article.elemento{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    width: 90%;
+    /* 0 para arriba y abajo*/
+    margin: 1% 5%;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #dedede;
+    box-sizing: border-box;
+}

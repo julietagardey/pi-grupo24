@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Pelicula from "../Pelicula/Pelicula";
+import Loader from "../Loader/Loader"
 
 class PeliculasTopRated extends Component {
     constructor(props) {
@@ -67,13 +68,12 @@ class PeliculasTopRated extends Component {
                             this.state.peliculas.map((pelicula, idx) => 
                                 <Pelicula 
                                     key= {idx}
-                                    // title= {pelicula.title}
                                     pelicula= {pelicula}
                                     favoritos= {this.state.favoritos.includes(pelicula.id)}
                                     updateStateFavs={(array) => this.updateStateFavs(array)}
                                     className="card"
                                 />):
-                            <h3>cargando...</h3>
+                            <Loader/>
                             
                     }
 

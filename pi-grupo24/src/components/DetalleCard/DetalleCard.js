@@ -4,18 +4,18 @@ class DetalleCard extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            pelicula: []
+            esFavorito: false,
         }
     }
 
     componentDidMount() {
-        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=f2d31985b9fc9e720758bcc82e3c955b`)
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.id}?api_key=f2d31985b9fc9e720758bcc82e3c955b`)
             .then(resp => resp.json())
             .then(data => {
-                console.log(this.props.match.params.id)
                 this.setState({
-                    DetalleCardContenido: data
+                    pelicula: data.results
                 })
+                console.log(data.results)
             })
             .catch(er => console.log(er))
     }
@@ -49,21 +49,20 @@ class DetalleCard extends Component {
     }
 
     render() {
-        return(
-            <h1>Probando 1..2..3..</h1>
+        const { title, id, poster_path, overview, vote_average, release_date } = this.state.pelicula
+        return (
+            // console.log(this.props.match.params.id)
+            
+
+            <article className="elemento">
+                <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="portada" className="img-producto" />
+                <h3 className="sub-elemento" >Título: {title}</h3>
+                <p className="sub-elemento">Rating: {vote_average}</p>
+                <p className="sub-elemento">Fecha de estreno: {release_date}</p>
+                <p className="sub-elemento mostrar">Sinopsis: {overview}</p>
+                <button className="botonFavoritos" onClick={() => !this.state.esFavorito ? this.agregarAFavoritos() : this.quitarFavoritos()} >{!this.state.esFavorito ? "Agregar a favoritos" : "Quitar de favoritos"}</button>
+            </article>
         )
-        // const { title, id, poster_path, overview, vote_average, release_date } = this.props.pelicula
-        // return (
-        //     <article className="elemento">
-        //         <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="portada" className="img-producto" />
-        //         <h3 className="sub-elemento" >Título: {titulo}</h3>
-        //         <p className="sub-elemento">Rating: {vote_average}</p>
-        //         <p className="sub-elemento">Fecha de estreno: {release_date}</p>
-        //         <p className="sub-elemento mostrar">Sinopsis: {overview}</p>
-        //         {/* HACER FUNCIONALIDAD DE AGREGAR Y QUITAR DE FAVORITOS */}
-        //         <button className="botonFavoritos" onClick={() => !this.state.esFavorito ? this.agregarAFavoritos() : this.quitarFavoritos()} >{!this.state.esFavorito ? "Agregar a favoritos" : "Quitar de favoritos"}</button>
-        //     </article>
-        // )
         // let DetalleCardContenido = this.state
         //   return (
 

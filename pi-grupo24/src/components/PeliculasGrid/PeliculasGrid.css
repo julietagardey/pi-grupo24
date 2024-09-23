@@ -1,7 +1,8 @@
 .pelis {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
     padding: 0px;
     width: 90%;
     /* 0 para arriba y abajo*/
@@ -18,7 +19,8 @@
 .pelis .elemento {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     
     max-width: 30%;
     padding: 0px;
