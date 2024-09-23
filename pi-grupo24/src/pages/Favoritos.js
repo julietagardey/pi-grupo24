@@ -29,7 +29,17 @@ class Favoritos extends Component {
 
     render(){
         return(
-            <PeliculasFavs arrayPeliculas={this.state.arrayPeliculas}/>
+            <> 
+            {
+                this.state.arrayPeliculas.length > 0 ? (
+                <PeliculasFavs arrayPeliculas={this.state.arrayPeliculas}/>
+                ):(
+                    <h2>No hay películas en favoritos</h2>
+                )
+            }
+            </>
+            
+            
         )
     }
 
