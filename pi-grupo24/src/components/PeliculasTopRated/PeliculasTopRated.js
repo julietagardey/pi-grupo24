@@ -10,8 +10,8 @@ class PeliculasTopRated extends Component {
             TopRated: [],
             peliculas: [],
             favoritos: localStorage.getItem('favoritos') ? JSON.parse(localStorage.getItem('favoritos')) : [],
-            page: 0,
-            backup: []
+            page: 1,
+            backup: [],
         }
     }
 
@@ -46,7 +46,8 @@ class PeliculasTopRated extends Component {
     }
 
     cargarMasPeliculas() {
-        fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${(this.state.page + 1)}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200`)
+        // `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${(this.state.page + 1)}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200`
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=f2d31985b9fc9e720758bcc82e3c955b&language=en-US&${this.state.page +1 }`)
         .then(resp => resp.json())
             .then(data => this.setState({
                 page: this.state.page + 1,
