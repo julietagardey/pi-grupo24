@@ -1,11 +1,13 @@
 // import { Component } from "react";
 import DetalleCard from "../components/DetalleCard/DetalleCard";
 
-const DetallePelicula = (props) => {
+const DetallePelicula = ({ match }) => {
+  const { id } = match.params;
+  console.log(id)
 
   return (
     <section className="pelis">
-      <DetalleCard id={props.match.params.id} />
+      <DetalleCard id={id} />
     </section>
   )
 };
@@ -14,14 +16,16 @@ const DetallePelicula = (props) => {
 //   constructor(props) {
 //     super(props)
 //     this.state = {
-      
+//       pelicula: {},
+//       // filmInfo: null,
+//       // id: this.props.match.params.id
 //     }
 //   }
 
 //   render() {
 //     return (
 //       <section className="pelis">
-//         <DetalleCard id={this.props.match.params.id} />   
+//         <DetalleCard match={this.props.match} />      
 //       </section>
 //     );
 //   }
